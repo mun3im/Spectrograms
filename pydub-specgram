@@ -1,0 +1,16 @@
+'''
+Spectrogram from MP3 file.
+
+https://stackoverflow.com/questions/15311853/plot-spectogram-from-mp3
+'''
+from pydub import AudioSegment
+import matplotlib.pyplot as plt
+from scipy.io import wavfile
+from tempfile import mktemp
+
+mp3_audio = AudioSegment.from_file('speech.mp3', format="mp3")  # read mp3
+wname = mktemp('.wav')  # use temporary file
+mp3_audio.export(wname, format="wav")  # convert to wav
+FS, data = wavfile.read(wname)  # read wav file
+plt.specgram(data, Fs=FS, NFFT=128, noverlap=0)  # plot
+plt.show()
