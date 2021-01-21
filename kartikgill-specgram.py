@@ -1,3 +1,7 @@
+'''
+https://gist.github.com/kartikgill/a1a6efdac872a9e66d528b93eb049f74#file-spectrogram-py
+'''
+
 def spectrogram(samples, sample_rate, stride_ms = 10.0, 
                           window_ms = 20.0, max_freq = None, eps = 1e-14):
 
