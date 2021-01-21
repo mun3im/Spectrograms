@@ -1,5 +1,6 @@
 '''
 https://gist.github.com/kartikgill/a1a6efdac872a9e66d528b93eb049f74#file-spectrogram-py
+https://towardsdatascience.com/understanding-audio-data-fourier-transform-fft-spectrogram-and-speech-recognition-a4072d228520
 '''
 
 def spectrogram(samples, sample_rate, stride_ms = 10.0, 
